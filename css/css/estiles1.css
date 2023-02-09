@@ -1,0 +1,63 @@
+.uno {
+    color: rgb(169, 106, 233);
+    background-color:aqua;
+    margin-left: 20px;
+    border: 1px solid rgb(0, 25, 253); 
+    padding: 10px;
+    
+}
+.dos {
+    color: rgb(214, 195, 233);
+    background-color:rgb(160, 231, 231);
+    margin-left: 20px;
+    border: 1px solid rgb(159, 166, 224); 
+    padding: 10px;
+    
+}
+span {
+    color: black;
+}
+h1#uno {
+    color: rgb(99, 90, 109);
+    background-color:rgb(125, 150, 150);
+    margin-left: 20px;
+    border: 5px solid rgb(85, 88, 112); 
+    border-style: dotted;
+    padding: 10px;
+    /* esto es un comentario */
+}
+p {
+    color: green;
+}
+table p {
+    color: gray;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    font-size: 15pt;
+}
+a:hover {
+    color: red;
+    text-decoration: underline;
+}
+a:visited {
+    color: rgb(71, 226, 32);
+    text-decoration: none;
+}
+a:active {
+    color: blue;
+
+}
+p:hover {
+    color: red;
+}
+p::first-letter {
+    font-size: 30px;
+    color: black;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+p {
+    font-size: 1em;
+}

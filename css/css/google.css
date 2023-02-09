@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+
+body {
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.t_ariba a {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 5px;
+    margin: 0;
+    color: black;
+    text-decoration: none;
+}
+.t_ariba a:hover {
+    
+    color: black;
+    text-decoration: underline;
+}
+.t_ariba td {
+    height: 10px;
+    
+    font-size: 5px;
+    margin: 0;
+}
+.ariba {
+    background-color:rgb(255, 255, 255) ;
+}
+.t_ariba {
+    margin-left: 5px;
+    margin-right: 5px;
+    width: 100%;
+    border: 1px;
+    
+}
+
+.menu_p {
+    width: 8px;
+    height: 8px;
+    background-color: rgb(255, 255, 255);
+    padding: 3px;
+    border-radius: 10vw;
+
+}
+.menu_p:hover {
+   background-color: rgb(225, 228, 231);
+}
+.menu_p:hover div {
+    border: solid .1px rgb(225, 228, 231);
+ }
+.menu_p div {
+    float: left;
+    margin: 0;
+    padding: 0px;
+    width: 20%;
+    height: 20%;
+    border: solid .1px rgb(255, 255, 255);
+    background-color:rgb(109, 109, 109) ;
+    border-radius: 10px ;
+}
+.t_ariba img {
+    margin-right: 10px;
+    width: 15px;
+    height: 15px;
+    border-radius: 20vw;
+    object-fit: cover;
+}
+.centro center  {
+    margin-top: 40px;
+    width: 90%;
+    height: auto;
+    
+ }
+.centro center img {
+   width: 100px;
+
+}
+.buscar_div {
+    
+    position: relative;
+    margin-top: 10px;
+    width: 200px;
+    height: 16px;
+    border: solid .5px rgb(206, 206, 206);
+    border-radius: 10vw;
+}
+.buscar_div:hover {
+    box-shadow: .2px .2px 1px rgb(211, 211, 211) ,-.2px -.2px 1px rgb(211, 211, 211);
+}
+.buscar_div input {
+    float: left;
+    height: 100%;
+    padding: 4px ;
+    border: none;
+    width: 55%;
+    outline: none;
+    font-size: 8px;
+    margin: 0 0 0 0px;
+    
+    
+    
+    
+}
+.buscar_div span {
+    float: left;
+    height: 100%;
+    padding: 4px ;
+    border: none;
+    color: rgb(145, 145, 145);
+    font-size: 10px;
+    margin: -1px 0 0 -0px;
+    
+    
+}
+
+
+
+.b_img_div {
+    position: relative;
+    float: left;
+    margin: 3px 0px 0 10px;
+   
+}
+.b_img_div img {
+    position: relative;
+    float: right;
+    max-width: 10px;
+    margin-left: 10px;
+   
+}
+.b_img_div span {
+    
+   margin: -3px -5px 0 0;
+   
+}
+
+
+.center_table {
+    float: left;
+    margin-top: -10px;
+    width: 100%;
+   
+}
+
+.center_table input {
+    background-color: rgb(250, 253, 255);
+    font-family: 'Open Sans', sans-serif;
+    width: 75px;
+    height: auto;
+    font-size: 7px;
+    border: 0;
+    padding: 3px 0 3px 0;
+    border-radius: 2px;
+    margin: 0;
+    margin-top: -10px;
+    
+    
+}
+.center_table input:hover {
+    box-shadow: .2px .2px 1px rgb(211, 211, 211) ,-.2px -.2px 1px rgb(211, 211, 211);
+}
+
+.centro p {
+    
+    font-family: 'Open Sans', sans-serif;
+    font-size: 7px;
+}
+
+.centro a {
+    margin-left: 10px;
+    text-decoration: none;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 7px;
+}
+
+
+.abajo div {
+    width: 100%;
+    border:  .5px  solid rgb(163, 163, 163);
+    height: 50px;
+    margin-top: 65px;
+}
+.abajo p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 7px;
+    margin-top: 5px;
+    color: rgb(116, 116, 116);
+}
+.abajo table {
+    margin-top: 0;
+    width: 100%;
+}
+
+.abajo a {
+    font-size: 5px;
+    color: rgb(116, 116, 116);
+    text-decoration: none;
+    margin: 0;
+}
+
+
+

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            border: 0;
+        }
+        body {
+            display: flex;
+            flex-direction: column;
+            background-color: rgb(199, 196, 48);
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            margin: 100px auto;
+            align-items: center;
+        }
+        input {
+            margin-top: 20px;
+            width: 300px;
+            height: 40px;
+            background-color: rgb(255, 255, 255);
+            border: .5px solid rgb(68, 68, 68);
+            border-radius: 10px;
+            outline: none;
+            color: rgb(0, 0, 0);
+            padding: 5px;
+        }
+        select {
+            padding: 5px;
+            color: rgb(0, 0, 0);
+            margin-top: 20px;
+            width: 300px;
+            height: 40px;
+            background-color: rgb(255, 255, 255);
+            border: .5px solid rgb(68, 68, 68);
+            border-radius: 10px;
+            outline: none;
+        }
+        input[type = "submit"] {
+            width: 250px;
+            height: 50px;
+            font-size: 20px;
+           
+        }
+        
+        
+    </style>
+   
+   
+</head>
+<body >
+    <form method="post" action="./connection.jsp">
+        <input type="text" placeholder="Nombre" name="nombre">
+        <input type="hidden" placeholder="Seleccion" name="seleccion">
+        <select name="bandera">
+            <option value="espana">España</option>
+            <option value="portugal">Portugal</option>
+            <option value="brasil">Brasil</option>
+        </select>
+        <input type="number" placeholder="Ganados" name="ganados">
+        <input type="number" placeholder="Jugados" name="jugados">
+        <input type="number" placeholder="Perdidos" name="perdidos">
+        <input type="number" placeholder="Empatados" name="empatados">
+        <input type="submit" value="Guardar">
+        <br>
+        <br>
+        <a href="./paises.jsp">PAISES</a>
+
+       
+    </form>
+    
+   
+   
+</body>
+
+</html>
