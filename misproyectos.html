@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sian Majnoon</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            background-color: black;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .paszamine {
+            background-color: black;
+            width: 600px;
+            height: auto;
+            flex-direction: row;
+            align-items: center;
+            flex-wrap: wrap;
+            border: 0;
+            
+        }
+        a {
+            text-decoration: none;
+        }
+
+        div {
+            margin: 10px;
+            width: 100px;
+            height: 100px;
+            background-color: white;
+            border: solid .5px gray;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            transition: all .5s;
+            box-shadow: .1px .1px 2px rgba(255, 255, 255, 0.377);
+        }
+
+        img {
+            width: 100%;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        h3 {
+            outline: none;
+            outline: none;
+            color: black;
+            font-size: 10px;
+            display: none;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    
+
+    <script>
+        function Proyecto(data = {}) {
+            this.data = data;
+            this.paszamine = document.createElement("div");
+            this.a = document.createElement("a");
+            this.a.setAttribute("href", this.data.link);
+            this.img = document.createElement("img");
+            this.img.src = this.data.img;
+            this.pName = document.createElement("h3");
+            this.pName.innerHTML = this.data.name;
+            this.img.addEventListener("mouseenter", (e) => {
+                this.animacion(1);
+            })
+            this.img.addEventListener("mouseout", (e) => {
+                this.animacion(2)
+            })
+            this.a.appendChild(this.paszamine);
+            this.paszamine.appendChild(this.img);
+            this.paszamine.appendChild(this.pName);
+        }
+        Proyecto.prototype.animacion = function (no) {
+            switch (no) {
+                case 1:
+                    this.paszamine.style.height = "130px";
+                    this.pName.style.display = "flex";
+                    break;
+
+                default:
+                    this.paszamine.style.height = "100px";
+                    this.pName.style.display = "none";
+                    break;
+            }
+
+        }
+        function Rabetecarbari() {
+            this.paszamine = document.createElement("div");
+            this.paszamine.className = "paszamine";
+            this.proyectos = [];
+
+            this.crearProyectos();
+        }
+        Rabetecarbari.prototype.crearProyectos = function () {
+            document.querySelector("body").appendChild(this.paszamine);
+            this.proyectos.push(new Proyecto({ name: "Juego de Cartas", img: "./images/Captura de pantalla (12).png", link: "https://juego-cartas-once.herokuapp.com" }));
+            this.proyectos.push(new Proyecto({ name: "Juego de Ajedrez", img: "./images/Captura de pantalla (8).png", link: "https://fullstack-ajedrez.herokuapp.com" }));
+            this.proyectos.push(new Proyecto({ name: "Examen", img: "./images/Captura de pantalla (9).png", link: "https://fullstack-examen.herokuapp.com/admin" }));
+            this.proyectos.push(new Proyecto({ name: "Menu de Cafeteria", img: "./images/Captura de pantalla (2).png", link: "https://cafe-meno.herokuapp.com/admin.html" }));
+            this.proyectos.push(new Proyecto({ name: "3D JS", img: "./images/Captura de pantalla (13).png", link: "https://os-3d.herokuapp.com" }));
+            this.proyectos.push(new Proyecto({ name: "Juego de Motocicleta", img: "./images/Captura de pantalla (10).png", link: "https://motor-os.herokuapp.com" }));
+            this.proyectos.push(new Proyecto({ name: "Juego de flappy bird", img: "./images/Captura de pantalla (11).png", link: "https://flapy-berd.herokuapp.com" }));
+            this.proyectos.push(new Proyecto({ name: "Juego de Memoria", img: "./images/Captura de pantalla (7).png", link: "https://cartas-juego.herokuapp.com" }));
+         
+
+            this.proyectos.forEach(e => {
+                this.paszamine.appendChild(e.a);
+            })
+        }
+        const rabetecarbari = new Rabetecarbari();
+    </script>
+</body>
+
+</html>

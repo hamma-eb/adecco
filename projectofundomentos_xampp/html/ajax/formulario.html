@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="escudo.php" method="get" name="formulario" id="form">
+        <select name="escudos" id="select">
+            <option value="g1">real madrid</option>
+            <option value="g2">atletico de madrid</option>
+            <option value="g3">valencia f.c</option>
+            <option value="g4">sevilla f.c</option>
+
+        </select>
+    </form>
+    <script>
+        let div = document.createElement("div");
+        document.querySelector("body").appendChild(div);
+        document.getElementById("select").addEventListener("change",() => {
+            let dataform = new FormData();
+            dataform.append("name",document.getElementById("select").value);
+           
+            let http = new XMLHttpRequest();
+            http.open("post","./escudo.php",true);
+            http.onreadystatechange = function() {
+                if(http.status == 200 && http.readyState == 4) {
+                    div.innerHTML = http.responseText;
+                }
+            }
+            http.send(dataform);
+        })
+    </script>
+</body>
+</html>

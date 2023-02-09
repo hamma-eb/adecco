@@ -1,0 +1,33 @@
+<!DOCTYPE html >
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script src="socket.io/socket.io.js"></script>
+    <script>
+        const socket = io();
+
+        function descarguearchivo() {
+          
+            if (window.XMLHttpRequest) {
+                p_http = new XMLHttpRequest();
+            }else if (window.ActiveXObject) {
+                p_http = new ActiveXObject("Microsoft.XMLHTTP");
+            }
+
+            p_http.onreadystatechange = function() {
+                if (p_http.status == 200 && p_http.readyState == 4) {
+                    alert(p_http.responseText);
+                }
+            }
+            p_http.open("GET",`http://127.0.0.1:5501/html/javascript/ajax/ajax.txt`,true);
+            p_http.send(null);
+        }
+        window.onload = descarguearchivo()
+    </script>
+</body>
+</html>
