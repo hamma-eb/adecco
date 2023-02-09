@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: black;
+        }
+        input{
+            margin-top: 5px;
+            height: 30px;
+            border: solid .1px rgb(112, 109, 109);
+            border-radius: 5px;
+            box-shadow: 1px 1px .5px 1px,inset 1px 1px 5px 1px;
+            transition: all .5s;
+            
+        }
+        input type[reng] {
+            box-shadow: none;;
+        }
+        input:hover {
+            width: 50%;
+            margin-left: -8%;
+            background-color: rgb(64, 65, 66);
+            color: white;
+
+            text-shadow: 1px 1px 5px white;
+        }
+        
+        td  {
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <form action="#" method="get" autocomplete="off">
+        <table width="100%" border="0">
+            <tr>
+                <td align="right">
+                    <label for="nombre">Nombre:</label>
+
+                </td>
+                <td>
+                    <input required autofocus type="text" name="nombre" id="nombre"  >
+
+                </td>
+            </tr>
+            <tr>
+                <td align="right">
+                    Email:
+
+                </td>
+                <td>
+                     <input type="email" name="email" >
+                </td>
+            </tr>
+            <tr>
+                <td align="right">
+                    Buscar:
+                </td>
+                <td>
+                    <input type="search" name="buscada" >
+                </td>
+            </tr>
+            <tr>
+                <td align="right">
+                    Direccion web:
+                </td>
+                <td>
+                    <input type="url" name="url" >
+                </td>
+            </tr>
+            <tr>
+                <td align="right">Telefono:</td>
+                <td><input type="tel" name="tel" ></td>
+            </tr>
+            <tr>
+                <td align="right">Numero:</td>
+                <td><input  type="number" name="numero" ></td>
+            </tr>
+            <tr>
+                <td align="right">Precio:</td>
+                <td><input name="reng" id="reng" type="range" min="0" max="10" value="0" step="1" ></td>
+            </tr>
+            <tr>
+                <td align="right">Fecha:</td>
+                <td><input type="date" name="fecha" value="2022-10-10"></td>
+            </tr>
+            <tr>
+                <td align="right">Semana:</td>
+                <td><input type="week" name="semana"></td>
+            </tr>
+            <tr>
+                <td align="right">Luna:</td>
+                <td><input type="month" name="lune"></td>
+            </tr>
+            <tr>
+                <td align="right">Hora:</td>
+                <td><input type="time"></td>
+            </tr>
+            <tr>
+                <td align="right">Fecha y Hora (con zona):</td>
+                <td><input type="datetime"></td>
+
+            </tr>
+            <tr>
+                <td align="right">Datatime-local</td>
+                <td><input type="datetime-local"></td>
+            </tr>
+            <tr>
+                <td align="right">Color:</td>
+                <td><input name="color" type="color"></td>
+            </tr>
+            <tr>
+                <td align="right">Codigo postal</td>
+                <td><input type="text" name="c_p" list="informaxion"></td>
+                <datalist id="informaxion">
+                    <option value="123456789" label="t2"></option>
+                    <option value="321654987" label="t1"></option>
+                </datalist>
+            </tr>
+            
+            
+            
+            
+            
+            
+        </table>
+       
+        <center>
+            <br>
+            <br>
+            <input type="submit" formnovalidate  >
+        </center>
+        
+
+    </form>
+    
+</body>
+   
+</html>

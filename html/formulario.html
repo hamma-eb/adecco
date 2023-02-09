@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <style>
+        body {
+            text-align: center;
+        }
+
+        table {
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="#" method="get">
+        <!-- Action
+        php
+        asp-aspx
+        servlet , jsp
+        -->
+        <h1>Formulario de Datos</h1>
+        <br>
+        <hr>
+        <br>
+        <input type="hidden" value="camisa=2,precio=20$">
+
+        <table border="0">
+
+            <tr>
+                <td width="40%" align="right">
+                    <label for="nombre">Nombre:</label>
+                </td>
+                <td align="left">
+                    <input type="text" name="nombre" id="nombre" size="20">
+                </td>
+            </tr>
+            <tr>
+                <td align="right">
+                    <label for="apellido">Apellido:</label>
+                </td>
+                <td align="left">
+                    <input type="text" name="apellido" id="apellido" size="20">
+                </td>
+            </tr>
+            <tr>
+                <td align="right">
+                    <label for="password">Password:</label>
+                </td>
+                <td align="left">
+                    <input type="password" name="password" id="password" size="20" maxlength="6">
+
+                </td>
+            </tr>
+        </table>
+        <br>
+        <br>
+
+        <label for="f_p"> Form de Pago:</label>
+        <input id="f_p" type="radio" name="fpago" value="visa"> visa
+        <input id="f_p" type="radio" name="fpago" value="paypal"> paypal
+        <input id="f_p" type="radio" name="fpago" value="master card"> master card
+        <br>
+        <br>
+        <br>
+        <!--cAStillas de varifacion horarios-->
+        Elije una o mas franjas horarios: <br>
+        <br>
+        <input type="checkbox" name="mananas" checked value="m"> Mañanas
+        <input type="checkbox" name="tardes" value="t"> Tardes
+        <input type="checkbox" name="noches" value="n"> Noches
+        <br>
+        <br>
+        <br>
+
+        <!--listas desplagables simples-->
+        elige tu cadena favorita: <br>
+        <br>
+        <select name="cadena" id="">
+            <option value="001">NetFlix</option>
+            <option selected value="002">HBO</option>
+            <option value="003">Prime</option>
+            <option value="004">Disney Channel</option>
+        </select>
+        <br>
+        <br>
+        <br>
+
+        <!--listas multiples-->
+        elige tus cadenas favoritas: <br>
+        <br>
+        <select name="cadena" id="" multiple>
+            <option value="001m">NetFlix</option>
+            <option selected value="002m">HBO</option>
+            <option value="003m">Prime</option>
+            <option value="004m">Disney Channel</option>
+        </select>
+        <br>
+        <br>
+        <br>
+
+        observacion: <br>
+        <textarea name="textrea" id="" cols="40" rows="5"></textarea>
+
+        <br>
+        <br>
+        <input type="reset" value="Borrar datos" style="background-color: red;border: 0;height: 30px;">
+        <input type="submit" value="Enviar datos" style="background-color: green;border: 0;height: 30px;" >
+
+
+    </form>
+</body>
+
+</html>
