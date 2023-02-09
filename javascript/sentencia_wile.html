@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function juego() {
+            let x = false;
+            let palabras = ["javascript","html","css"];
+            let p = palabras[Math.floor(Math.random()*3)];
+            
+            let bakht = 2;
+            while (x == false) {
+                let palabra = prompt("introsuce una palabra de palabras javascript - css - html");
+    
+                if(palabra == p) {
+                    x = true;
+                   
+            
+                    alert("quieres otra vez ?!")
+                    juego();
+                }else {
+                    bakht -= 1;
+                    alert(`otra vez falta ${bakht} veces `);
+                }
+                if(bakht <= 0) {
+                    x = true;
+                    alert("fin del juego")
+                    alert("quieres otra vez ?!")
+                    juego();
+                }    
+            }
+        }
+        juego();
+    </script>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        td {
+            width: 100px;
+            height: 100px;
+           
+        }
+        table {
+            margin: 0 auto;
+           
+
+        }
+        h3 {
+            font-size: 60px;
+           
+            margin: 0 0 20px 20px;
+        }
+    </style>
+</head>
+<body >
+    <script >
+        let mohreha = ["&#9814", "&#9816", "&#9815", "&#9813", "&#9812", "&#9815", "&#9816", "&#9814", "&#9817", "&#9817", "&#9817", "&#9817", "&#9817", "&#9817", "&#9817", "&#9817", "&#9817", "&#9817", "&#9817", "&#9817", "&#9817", "&#9817", "&#9817", "&#9817", "&#9814", "&#9816", "&#9815", "&#9813", "&#9812", "&#9815", "&#9816", "&#9814"]
+        let table = ``;
+        let no = 1;
+        for (let index = 1; index <= 8; index++) {
+            let td = ""
+            for (let index_ = 0; index_ <= 8; index_++) {
+                if (index_ < 8) {
+                    
+                    if (no % 2 == 0) {
+                        td += `<td  width="50px" id="td${index}${index_}" height="50px" bgcolor="#000000"></td>`;
+                    }else {
+                        td += `<td width="50px" id="td${index}${index_}" height="50px" bgcolor="#ffffff"></td>`;
+                    }
+                }
+                
+                no++;
+            }
+
+            table += `<tr>${td}</tr>`;
+        }
+
+        document.write(`<table border="1">${table}</table>`);
+    
+        let trs = document.querySelectorAll(`td`);
+        let m_no = 0;
+        for (let index = 0; index < trs.length; index++) {
+
+            if (index >= 48 && index <= 64) {
+                
+                trs[index].innerHTML = `<h3 style="color: red;">${mohreha[m_no]}</h3>`;
+               
+                m_no++;
+            }
+            if (index >= 0 && index <= 15) {
+                
+                trs[index].innerHTML = `<h3 style="color: green;">${mohreha[m_no]}</h3>`;
+               
+                m_no++;
+            }
+            
+        }
+        
+        
+    
+    </script>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img {
+            width: 200px;
+            height: 250px;
+
+        }
+
+        input {
+            width: 100px;
+            height: 50px;
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <img src="../images/dadospng/dado1.png" alt="">
+    <img src="../images/dadospng/dado2.png" alt="">
+    <img src="../images/dadospng/dado3.png" alt="">
+    <img src="../images/dadospng/dado4.png" alt="">
+    <img src="../images/dadospng/dado5.png" alt="">
+    <img src="../images/dadospng/dado6.png" alt="">
+    <input onclick="jugar()" type="button" value="jugar">
+    <script>
+        /*let jugar = ()=> {
+           
+            document.images[0].src = `${location.origin}/html/images/dadospng/dado${Math.ceil(Math.random()*6)}.png`;
+        }*/
+        let durum = {
+            durum: "rast",
+            r: "r",
+            ch: "ch"
+        }
+
+        let jugar = () => {
+            switch (durum.durum) {
+                case durum.r:
+
+                    for (let index = document.images.length - 1; index >= 0; index--) {
+
+                        document.images[document.images.length-1 -index].src = `${location.origin}/html/images/dadospng/dado${index +1}.png`;
+
+                    }
+                    durum.durum = durum.ch
+                    break;
+
+                default:
+
+                    for (let index = document.images.length - 1; index >= 0; index--) {
+
+                        document.images[document.images.length-1 -index].src = `${location.origin}/html/images/dadospng/dado${document.images.length -index}.png`;
+
+                    }
+                    durum.durum = durum.r
+                    break;
+            }
+
+        }
+    </script>
+</body>
+
+</html>

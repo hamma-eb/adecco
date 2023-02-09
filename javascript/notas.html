@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function fila(araye_) {
+            let araye = Array(araye_.length);
+            araye_.forEach(e => {
+                let shomar = 0;
+                araye_.forEach(e_ => {
+                    if(e_ < e ) shomar++;
+                })
+                if(araye[shomar] == undefined){
+        
+                    araye[shomar] = e;
+                }else {
+                    araye[shomar-1] = e;
+                }
+
+            })
+
+            return araye;
+        }
+        function max_minVal(araye = [],method = "max") {
+            let val = 0;
+            if(method == "max") {
+                araye.forEach(e => {
+                    if(Number(e) > val) val = Number(e);
+                })
+
+            }else {
+                araye.forEach(e => {
+                    if(Number(e) < max_minVal(araye)) val = Number(e);
+                })
+            }
+            return val;
+        }
+        function notaMedia(araye = []) {
+            let sum = 0;
+            araye.forEach(e => {
+                sum += Number(e);
+            })
+            return sum /araye.length
+        }
+        let notas = [];
+        for (let index = 0; index < 5; index++) {
+            notas.push(prompt(`pon la nota de cada alumno ${index+1}`));
+            console.log(notas[index]);
+        }
+        
+        console.log(notas);
+        console.log(`nota media es ${ notaMedia(notas)}`);
+        console.log(`numero mayor es ${ max_minVal(notas , "min")}`);
+        console.log(fila(notas));
+
+    </script>
+</body>
+</html>

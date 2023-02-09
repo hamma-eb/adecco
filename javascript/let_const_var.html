@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+
+
+    <script>
+        function OPtion(link, name) {
+            this.link = link;
+            this.option = document.createElement("option");
+            this.option.value = link;
+            this.option.innerHTML = name;
+            selector.appendChild(this.option);
+        }
+        let videos = [{ name: "vidio 1", link: '<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/hQXLrPlcbeo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>' },
+        { name: "vidio 2", link: '<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/WKYi4g3zAVw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>' },
+        { name: "vidio 3", link: '<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/JDYsuZA7SvI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>' }];
+        let body = document.querySelector("body");
+        let selector = document.createElement("select");
+
+        let video = document.createElement("div");
+        video.innerHTML = '<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/hQXLrPlcbeo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
+        video.style.cssText = "width: 500px";
+
+        body.appendChild(selector);
+        body.appendChild(video);
+        let optiones = []
+        videos.forEach(e => {
+
+            optiones.push(new OPtion(e.link, e.name))
+        })
+
+        selector.addEventListener("input", (e_) => {
+            video.innerHTML = selector.value
+            console.log(selector.value)
+        })
+
+
+
+
+
+    </script>
+</body>
+
+</html>

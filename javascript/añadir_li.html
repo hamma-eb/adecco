@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        let ul = document.createElement("ul");
+        let button = document.createElement("input");
+        button.type = "button";
+        button.value = "añadir";
+        let text = document.createElement("input");
+        text.type = "text";
+
+        let body = document.querySelector("body")
+        body.appendChild(ul);
+
+        body.appendChild(button);
+
+
+        let a = [];
+        function anadir_li() {
+            let lis = document.getElementsByTagName("li");
+            let li = document.createElement("li");
+
+            let d = false;
+
+            while(d == false) {
+
+                let text = prompt();
+    
+                let durum = 0;
+                for (let index = 0; index < a.length; index++) {
+                   
+                    console.log(a)
+                    if(a[index] == text) durum++;
+                }
+                if (durum == 0) {
+                    
+                    li.appendChild(document.createTextNode(text));
+                    ul.appendChild(li);
+                    a.push(text);
+                    d = true
+                }else {
+                    alert("no exsiste")
+                }
+            }
+
+           
+        }
+        button.addEventListener("click", () => {
+            anadir_li();
+        })
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function facturial(val,min,max) {
+            let por = val;
+            for (let index = val-1; index > 0; index = index-1) {
+                por = por * index;
+                
+            }
+            if (val >= min && val <= max) {
+
+                return por;
+            }else {
+                return "no exsiste";
+            }
+            
+        }
+      
+        //console.log(facturial(prompt("numero tiene que ser dentro de  0 hasta 10"),0,10))
+
+        function t_n() {
+            let val = prompt("no:");
+            let tipo = false;
+            let no_ = Array();
+            let ripit = 0;
+            for (let index = 2; index < val-1; index++) {
+                if (val % index == 0) {
+                    tipo = true;
+                    no_.push(index)
+                    ripit ++
+                }
+                
+            }
+            
+            if (tipo == true) {
+                return `este numero es divisible con ${ripit} numeros que son ${no_}`
+                alert(`este numero es divisible con ${ripit} numeros que son ${no_}`)
+            }else {
+                return `este numero es divisor con ${ripit} numeros que son ${no_}`
+                alert(`este numero es divisor con ${ripit} numeros que son ${no_}`)
+            }
+        }
+        prompt()
+        console.log(t_n());
+
+       
+
+
+        
+    </script>
+</body>
+</html>

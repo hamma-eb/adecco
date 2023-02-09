@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let cadena = "hoy es vEntisiete dE octubrE de dosmilvEntidos";
+       
+        function vocales(val) {
+            let v_no = 0;
+            let e_no = 0;
+            for (let index = 0; index < cadena.length; index++) {
+                let v = val.charAt(index);
+                switch(v.toLowerCase(v)) {
+                    case "a": 
+                        v_no++;
+                    break
+                    case "e": 
+                        v_no++;
+                        e_no++;
+                    break
+                    case "o": 
+                        v_no++;
+                    break
+                    case "u": 
+                        v_no++;
+                    break
+                    case "i": 
+                        v_no++;
+                    break
+                }
+
+            }
+            return `vocales es ${v_no} y e es ${e_no}`;
+        }
+
+        console.log(vocales(cadena))
+
+    </script>
+</body>
+
+</html>

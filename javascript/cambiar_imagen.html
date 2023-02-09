@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+
+        }
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        input {
+            width: 200px;
+            height: 40px;
+            margin-top: 40px;
+            font-size: 15px;
+            border: 0;
+            background-color: black;
+            color: aliceblue;
+            border-radius: 5px;
+            box-shadow: 1px 1px 1px rgb(61, 61, 61),1px 1px 1px rgb(61, 61, 61),1px 1px 1px rgb(61, 61, 61),1px 1px 1px rgb(61, 61, 61) ;
+
+        }
+        img {
+            width: 500px;
+            height: 500px;
+            border: solid 1px black;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        let body = document.querySelector("body");
+        let img = new Image();
+        img.src = "../images/img1.jpg";
+        let button = document.createElement("input");
+        button.type = "button";
+        button.value = "cambia foto";
+
+        img.src == "../images/img1.jpg" ? img.src = "../images/img2.jpg" : img.src = "../images/img1.jpg";
+
+        body.appendChild(img);
+        body.appendChild(button);
+        let img_no = 1;
+        button.addEventListener("click",()=> {
+            img_no++;
+            img.src = `../images/img${img_no}.jpg`;
+            if(img_no > 4)img_no = 0;
+        })
+
+
+    </script>
+</body>
+</html>

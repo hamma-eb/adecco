@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            position: relative;
+
+        }
+
+        img {
+            width: 200px;
+            height: 200px;
+           
+            object-fit: cover;
+        }
+
+        input {
+            margin-top: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        function cambiar() {
+            
+            document.images[0].src == `${location.origin}/html/images/img3.jpg`   ? document.images[0].src = `${location.origin}/html/images/img1.jpg` : document.images[0].src = `${location.origin}/html/images/img3.jpg`;
+            
+        }
+    </script>
+
+    <img src="../images/img3.jpg" alt="">
+    
+
+    <br>
+    <div>
+        <input onclick="cambiar()" type="button" value="cambia">
+
+    </div>
+
+</body>
+
+</html>

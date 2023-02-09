@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+
+        for (let index = 1; index <= 6; index++) {
+            document.write(`<h${index}> cabecera de tamaño ${index}</${index}><br>`);
+        } 
+        
+        for (let index = 0; index < 4; index++) {
+            
+            for (let index_ = 0; index_ < 4; index_++) {
+                if (index_ == index ||  (index+index_) == 3) {
+                    document.write(`1&nbsp;`);
+                }else {
+
+                    document.write(`0&nbsp;`);
+                }
+            }
+            document.write(`<br>`);
+            
+        }
+    </script>
+</body>
+</html>

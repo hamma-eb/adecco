@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .back {
+            
+            width: 300px;
+            height: 500px;
+            border: 2px solid black;
+            margin: 30px auto;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .numeros {
+            width: 25px;
+            height: 45px;
+            background-color: rgb(255, 255, 255);
+            color: blue;
+            margin-left: 8px;
+            margin-right: 8px;
+            border: 1px solid rgb(0, 0, 0);
+            border-radius: 10px;
+            
+        }
+        .game_button {
+            width: 200px;
+            height: 80px;
+            background-color: gold;
+            color: black;
+            border: .5px solid rgb(218, 166, 54);
+            margin: 30px auto;
+            border-radius: 30px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        let sina = [];
+        for (let index = 0; index < 100; index++) {
+            sina.push(Math.floor(Math.random()*1000)+1);
+            
+        }
+        function Siralama(array) {
+            let siralama = Array(array.length);
+            for (let index = 0; index < array.length; index++) {
+                let sira = 0;
+                for (let index_ = 0; index_ < array.length; index_++) {
+                    
+                    if(index !== index_ && array[index] > array[index_]) sira++;
+                }
+
+                let durum = false;
+                let no = 0;
+                while (durum == false) {
+                    if (siralama[sira+no] !== undefined ) {
+                        
+                        no++;
+                    }else {
+                        
+                        siralama[sira+no] = array[index];
+                        durum = true;
+                    }
+                }
+            }
+            return siralama;
+        }
+        console.log(Siralama(sina))
+        let game;
+        
+        function CrateElement(data = { name: "div", inerhtml: undefined, id: undefined, class: undefined, type: undefined, value: undefined, style: undefined, atriviuts: [{ name: undefined, value: undefined }] }) {
+            let element = document.createElement(data.name);
+            if (data.inerhtml !== undefined) element.innerHTML = data.inerhtml;
+            if (data.id !== undefined) element.id = data.id;
+            if (data.class !== undefined) element.className = data.class;
+            if (data.type !== undefined) element.type = data.type;
+            if (data.value !== undefined) element.value = data.value;
+            if (data.style !== undefined) element.style.cssText = data.style;
+            if (data.atriviuts !== undefined) {
+                data.atriviuts.forEach(e => {
+                    element.setAttribute(e.name, e.value);
+                })
+            }
+            return element;
+        }
+        function araye_sinrepit() {
+            let araye = [];
+            let no = 0;
+            while (araye.length < 6) {
+                let no_random = Math.floor(Math.random() * 49) + 1;
+                let no_ = 0;
+                for (let index = 0; index < araye.length; index++) {
+                    if (araye[index] == no_random) no_++;
+                }
+                if (no_ == 0) araye.push(no_random);
+            }
+            return araye;
+        }
+        console.log(araye_sinrepit());
+
+
+        function Game() {
+            this.back = CrateElement({name:"div",class:"back"});
+            this.numeros = [];
+
+            for (let index = 1; index <= 49; index++) {
+                this.numeros.push(CrateElement({name: "input",class:"numeros",value:index,type:"button"}));
+            }
+
+            this.game_button = CrateElement({name:"input",class:"game_button",value:"Game",type:"button"});
+
+            this.Crate();
+
+            this.game_button.addEventListener("click",()=> {
+                this.Play();
+            })
+        }
+        Game.prototype.Crate = function() {
+            document.querySelector("body").appendChild(this.back);
+            document.querySelector("body").appendChild(this.game_button);
+            this.numeros.forEach(e => {
+                this.back.appendChild(e);
+            })
+        }
+        Game.prototype.Play = function() {
+            let numeros = araye_sinrepit();
+            this.numeros.forEach(e => {
+                e.style.backgroundColor = "rgb(255, 255, 255)";
+            })
+            for (let index = 0; index < numeros.length; index++) {
+                this.numeros[numeros[index]-1].style.backgroundColor = "gold";
+                
+            }
+        }
+
+        game = new Game();
+    </script>
+</body>
+
+</html>

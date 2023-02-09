@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+
+        }
+
+        img {
+            width: 200px;
+            height: 300px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <img onclick="derecha()" src="../images/slider/izquierda.png" alt="">
+    <img src="../images/slider/1.png" alt="">
+    <img onclick="izquierda()" src="../images/slider/derecha.png" alt="">
+
+    <script>
+        let f_no = 2;
+        let izquierda = () => {
+            if (f_no <= 5) {
+                if(f_no < 5 ) f_no++ ;
+                document.images[1].src = `${location.origin}/html/images/slider/${f_no}.png`;
+            }
+        }
+
+        let derecha = () => {
+            if (f_no >= 1) {
+                if(f_no > 1 ) f_no-- ;
+                document.images[1].src = `${location.origin}/html/images/slider/${f_no}.png`;
+            }
+        }
+    </script>
+</body>
+
+</html>

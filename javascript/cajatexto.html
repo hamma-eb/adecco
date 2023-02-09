@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    
+
+    <form name="miform">
+        <input type="text" size="20" name="caja1" >
+        +
+        <input type="text" size="20" name="caja2">
+        -
+        <input type="text" size="20" name="caja3">
+        *
+        <input type="text" size="20" name="caja4">
+        /
+        <input type="text" size="20" name="caja5">
+        <input type="button" value="yaa!" name="button" >
+        =
+        <input type="text" size="20" name="caja6">
+        
+    </form>
+    <script>
+        
+        let button = document.miform.button;
+        let c1 = document.miform.caja1;
+        let c2 = document.miform.caja2;
+        let c3 = document.miform.caja3;
+        let c4 = document.miform.caja4;
+        let c5 = document.miform.caja5;
+        let c6 = document.miform.caja6;
+        button.addEventListener("click" ,()=> {
+            let val = ""
+            val = c1.value+"+"+c2.value+"-"+c3.value+"*"+c4.value+"/"+c5.value;
+            c6.value = eval(val);
+        })
+    </script>
+</body>
+</html>
